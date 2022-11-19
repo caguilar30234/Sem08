@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.sem08.R
+import com.sem08.adapter.LugarAdapter
 import com.sem08.databinding.FragmentHomeBinding
 import com.sem08.viewModel.HomeViewModel
 
@@ -17,23 +20,33 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding.btAddLugar.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_home_to_addLugarFragment)
         }
-        return root
+
+        //Listado de lugares
+        val lugarAdapter = LugarAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = lugarAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        homeViewModel.obtenerLugares.observe(viewLifecycleOwner){
+            lugares -> lugarAdapter.setLugares(lugares)
+            //Es igual a:
+            //lugarAdapter.setLugares(it)
+        }
+
+        return binding.root
     }
 
     override fun onDestroyView() {

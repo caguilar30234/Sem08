@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/drawable/ic_add.xml" value="0.1505" />
         <entry key="..\:/documentos/movil/Sem08/app/src/main/res/drawable/ic_login.xml" value="0.35" />
         <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/activity_principal.xml" value="0.275" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/app_bar_principal.xml" value="0.275" />
         <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/content_principal.xml" value="0.3625" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/fragment_add_lugar.xml" value="0.275" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/fragment_slideshow.xml" value="0.3625" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/lugar_fila.xml" value="0.3614583333333333" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/layout/nav_header_principal.xml" value="0.3625" />
         <entry key="..\:/documentos/movil/Sem08/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
-        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/menu/principal.xml" value="0.33" />
+        <entry key="..\:/documentos/movil/Sem08/app/src/main/res/menu/principal.xml" value="0.1" />
       </map>
     </option>
   </component>

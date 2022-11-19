@@ -10,8 +10,20 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="logout">Logout</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="NombreLugar">Nombre del lugar</string>
+    <string name="CorreoLugar">Email</string>
+    <string name="TelefonoLugar">Teléfono(9999-9999)</string>
+    <string name="WebLugar">Web</string>
+    <string name="btAddLugar">Agregar lugar</string>
+
+    <string name="ms_AddLugar">Lugar agregado</string>
+    <string name="ms_FaltanVaolores">Falatn Valores</string>
+
 </resources>
