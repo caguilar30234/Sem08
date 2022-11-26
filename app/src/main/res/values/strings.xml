@@ -24,6 +24,10 @@
     <string name="btAddLugar">Agregar lugar</string>
 
     <string name="ms_AddLugar">Lugar agregado</string>
-    <string name="ms_FaltanVaolores">Falatn Valores</string>
+    <string name="ms_FaltanVaolores">Falan Valores</string>
+    <string name="ms_UpdateLugar">Lugar actualizado</string>
+
+    <string name="btUpdateLugar">Actualizar Lugar</string>
+    <string name="btDeleteLugar">Eliminar Lugar</string>
 
 </resources>

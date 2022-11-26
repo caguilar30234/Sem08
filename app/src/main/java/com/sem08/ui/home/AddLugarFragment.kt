@@ -23,7 +23,7 @@ class AddLugarFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        homeViewModel = ViewModelProvider(this).get(homeViewModel::class.java)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentAddLugarBinding.inflate(inflater, container, false)
 
         binding.btAgregar.setOnClickListener{agregarLugar()}
@@ -39,7 +39,7 @@ class AddLugarFragment : Fragment() {
         val web = binding.etWeb.text.toString()
 
         if(nombre.isNotEmpty()){
-            val lugar = Lugar(0,nombre,correo,telefono,web)
+            val lugar = Lugar("",nombre,correo,telefono,web)
             homeViewModel.guardarLugar(lugar)
             Toast.makeText(requireContext(),getText(R.string.ms_AddLugar), Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addLugarFragment_to_nav_home)

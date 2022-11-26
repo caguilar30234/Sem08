@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sem08.ui.home.HomeFragmentDirections
 import com.sem08.databinding.LugarFilaBinding
 import com.sem08.model.Lugar
+import com.sem08.ui.home.UpdateLugarFragmentDirections
 
 class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewholder>() {
     //lista de lugares
@@ -22,6 +23,13 @@ class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewholder>() {
             itemBinding.tvNombre.text = lugar.nombre
             itemBinding.tvCorreo.text = lugar.correo
             itemBinding.tvTelefono.text = lugar.telefono
+
+            //Evento enviar Update
+            itemBinding.vistaFila.setOnClickListener {
+                val accion = HomeFragmentDirections.actionNavHomeToUpdateLugarFragment(lugar)
+                itemView.findNavController().navigate(accion)
+            }
+
         }
     }
 
