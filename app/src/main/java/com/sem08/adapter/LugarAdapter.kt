@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sem08.ui.home.HomeFragmentDirections
 import com.sem08.databinding.LugarFilaBinding
 import com.sem08.model.Lugar
@@ -15,7 +16,7 @@ class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewholder>() {
 
     fun setLugares(lugares: List<Lugar>) {
         this.listaLugares = lugares
-        notifyDataSetChanged() //Provoca que se redibuje la lista
+        notifyDataSetChanged()
     }
 
     inner class LugarViewholder(private val itemBinding: LugarFilaBinding) : RecyclerView.ViewHolder(itemBinding.root){
@@ -23,6 +24,13 @@ class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewholder>() {
             itemBinding.tvNombre.text = lugar.nombre
             itemBinding.tvCorreo.text = lugar.correo
             itemBinding.tvTelefono.text = lugar.telefono
+
+           if(lugar.rutaImagen?.isNotEmpty() == true)
+           {
+               Glide.with(itemBinding.root.context)
+                   .load(lugar.rutaImagen)
+                   .into(itemBinding.imagen)
+           }
 
             //Evento enviar Update
             itemBinding.vistaFila.setOnClickListener {

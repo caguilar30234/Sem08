@@ -24,10 +24,25 @@
     <string name="btAddLugar">Agregar lugar</string>
 
     <string name="ms_AddLugar">Lugar agregado</string>
-    <string name="ms_FaltanVaolores">Falan Valores</string>
+    <string name="ms_FaltanValores">Falan Valores</string>
     <string name="ms_UpdateLugar">Lugar actualizado</string>
+    <string name="ms_RemoveLugar">No se ha podido eliminar</string>
 
     <string name="btUpdateLugar">Actualizar Lugar</string>
     <string name="btDeleteLugar">Eliminar Lugar</string>
+
+    <string name="msg_seguro_borrado">¿Está seguro de eliminar el lugar: </string>
+    <string name="msg_si">Si</string>
+    <string name="msg_no">No</string>
+    <string name="msg_lugar_deleted">Lugar Eliminado…</string>
+
+    <string name="todo">TODO</string>
+    <string name="msg_imagen">Foto del lugar</string>
+    <string name="msgEscucharAudio">Escuchando</string>
+
+    <string name="msgIniciaNotaAudio">Grabando</string>
+    <string name="msgDetieneNotaAudio">Detener Audio</string>
+
+    <string name="msgSubiendo">Subiendo Archivos</string>
 
 </resources>
